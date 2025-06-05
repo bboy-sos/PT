@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Divisibility Flowchart</title>
+    <style>
+        body { font-family: Arial, sans-serif; background: #f4f6fb; }
+        .flowchart {
+            background: #fff;
+            border: 1px solid #d1d5db;
+            padding: 32px 24px;
+            margin: 40px auto;
+            width: 520px;
+            border-radius: 16px;
+            box-shadow: 0 4px 24px #e0e0e0;
+            position: relative;
+        }
+        .shape {
+            display: block;
+            min-width: 180px;
+            padding: 14px 18px;
+            margin: 18px auto;
+            text-align: center;
+            font-weight: bold;
+            color: #fff;
+            box-shadow: 0 2px 8px #ececec;
+        }
+        .start, .end {
+            background: #388e3c;
+            border-radius: 50px;
+            width: 180px;
+        }
+        .input {
+            background: #1976d2;
+            border-radius: 12px;
+            transform: skew(-20deg);
+        }
+        .output {
+            background: #8e24aa;
+            border-radius: 12px;
+            margin-left: 60px;
+            margin-right: 60px;
+            transform: skew(-20deg);
+        }
+        .decision {
+            background: #fbc02d;
+            color: #333;
+            width: 140px;
+            height: 60px;
+            line-height: 60px;
+            border-radius: 0;
+            border: 2px solid #fbc02d;
+            transform: rotate(45deg);
+            margin: 32px auto 12px auto;
+            position: relative;
+            box-shadow: 0 2px 8px #ececec;
+        }
+        .decision-text {
+            display: block;
+            transform: rotate(-45deg);
+            width: 140px;
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #333;
+            font-weight: bold;
+            font-size: 15px;
+        }
+        .arrow {
+            text-align: center;
+            font-size: 28px;
+            color: #888;
+            margin: 0;
+        }
+        .branch {
+            display: flex;
+            justify-content: space-between;
+            margin: 0 10px;
+        }
+        .branch-label {
+            font-size: 15px;
+            color: #1976d2;
+            margin: 0 10px;
+            font-weight: bold;
+            text-align: center;
+        }
+        @media (max-width: 600px) {
+            .flowchart { width: 98vw; padding: 8px 2vw; }
+            .shape, .start, .end { min-width: 120px; width: 120px; }
+            .decision, .decision-text { width: 90px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="flowchart">
+        <div class="shape start">START</div>
+        <div class="arrow">&#8595;</div>
+        <div class="shape input">INPUT number</div>
+        <div class="arrow">&#8595;</div>
+        <div class="shape decision">
+            <span class="decision-text">number % 3 == 0<br>AND<br>number % 5 == 0?</span>
+        </div>
+        <div class="branch">
+            <div>iv>
+                <div class="branch-label">Yes</div>branch-label">Yes</div>
+                <div class="shape output">OUTPUT:<br>"Divisible by both"</div>div class="shape output">OUTPUT:<br>"Divisible by both"</div>
+            </div>
+            <div>
+                <div class="branch-label">No</div>iv class="branch-label">No</div>
+                <div class="arrow">&#8595;</div>div class="arrow">&#8595;</div>
+                <div class="shape decision" style="margin-top:0;">"margin-top:0;">
+                    <span class="decision-text">number % 3 == 0?</span>number % 3 == 0?</span>
+                </div>
+                <div class="branch">
+                    <div>iv>
+                        <div class="branch-label">Yes</div>branch-label">Yes</div>
+                        <div class="shape output">OUTPUT:<br>"Divisible by 3 only"</div>div class="shape output">OUTPUT:<br>"Divisible by 3 only"</div>
+                    </div>
+                    <div>
+                        <div class="branch-label">No</div>iv class="branch-label">No</div>
+                        <div class="arrow">&#8595;</div>div class="arrow">&#8595;</div>
+                        <div class="shape decision" style="margin-top:0;">"margin-top:0;">
+                            <span class="decision-text">number % 5 == 0?</span>number % 5 == 0?</span>
+                        </div>
+                        <div class="branch">
+                            <div>iv>
+                                <div class="branch-label">Yes</div>branch-label">Yes</div>
+                                <div class="shape output">OUTPUT:<br>"Divisible by 5 only"</div>div class="shape output">OUTPUT:<br>"Divisible by 5 only"</div>
+                            </div>
+                            <div>
+                                <div class="branch-label">No</div>iv class="branch-label">No</div>
+                                <div class="shape output">OUTPUT:<br>"Not divisible"</div>div class="shape output">OUTPUT:<br>"Not divisible"</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="arrow">&#8595;</div>="arrow">&#8595;</div>
+        <div class="shape end">END</div>lass="shape end">END</div>
+    </div>
+</body>
+</html>
