@@ -32,3 +32,4 @@ END IF
 OUTPUT "Total pay: ", totalPay
 END
 ```
+man go
